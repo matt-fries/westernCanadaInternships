@@ -40,6 +40,11 @@ def parse_apply_cell(cell: str) -> tuple[str, str]:
     """Return (status, url) from the Apply column."""
     if "closed" in cell.lower():
         return "Closed", ""
+    # Match nested Markdown image link: [![...](badge-url)](actual-url)
+    nested = re.search(r"\[!\[.*?\]\(.*?\)\]\((https?://[^)]+)\)", cell)
+    if nested:
+        return "Open", nested.group(1)
+    # Fallback: plain Markdown link [text](url)
     match = re.search(r"\]\((https?://[^)]+)\)", cell)
     if match:
         return "Open", match.group(1)
