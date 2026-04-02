@@ -33,4 +33,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add western_canada_internships.xlsx
           git diff --cached --quiet || git commit -m "Update Western Canada internships spreadsheet $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
