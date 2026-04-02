@@ -160,11 +160,10 @@ def write_xlsx(rows: list[dict], output: str) -> None:
             cell.border = thin_border
             cell.alignment = wrap_alignment
 
-        # Apply link as clickable hyperlink
+        # Apply link as plain URL
         if row["apply_url"]:
             link_cell = ws.cell(row=row_idx, column=5)
-            link_cell.hyperlink = row["apply_url"]
-            link_cell.value = "Apply Here"
+            link_cell.value = row["apply_url"]
             link_cell.font = link_font
 
         # Highlight open rows green
@@ -173,7 +172,7 @@ def write_xlsx(rows: list[dict], output: str) -> None:
                 ws.cell(row=row_idx, column=col_idx).fill = green_fill
 
     # Column widths
-    col_widths = [25, 50, 25, 10, 15, 15]
+    col_widths = [25, 50, 25, 10, 50, 15]
     for i, width in enumerate(col_widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = width
 
