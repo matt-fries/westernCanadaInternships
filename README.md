@@ -9,6 +9,10 @@ Internship data is pulled from the following community-maintained repositories:
 - **[Canadian-Tech-Internships-2026](https://github.com/negarprh/Canadian-Tech-Internships-2026)** by [negarprh](https://github.com/negarprh) — Canadian tech internship listings in Markdown table format.
 - **[Summer2026-Internships](https://github.com/SimplifyJobs/Summer2026-Internships)** by [SimplifyJobs](https://github.com/SimplifyJobs) — Comprehensive internship listings in HTML table format.
 
+## Related Canada Student Job Resources
+
+- **[Hanzilla Jobs](https://jobs.hanzilla.co/internships/)** — free daily-updated Canadian student and recent-grad jobs board for internships, co-ops, new-grad, junior, and entry-level roles across tech, engineering, finance, business, and sciences.
+
 ## Setup
 
 Requires Python 3.12+.
